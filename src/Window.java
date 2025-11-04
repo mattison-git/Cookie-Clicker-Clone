@@ -18,6 +18,7 @@ public class Window {
         frame.setResizable(false);
         frame.setTitle("Window");
         frame.setVisible(true);
+        initSecondCounter();
 
         return "Window successfully initialized";
     }
@@ -114,6 +115,19 @@ public class Window {
             }
 
         });
+    }
+
+
+    public static void initSecondCounter() {
+        JLabel clickspersecond = new JLabel(String.valueOf(clicksPerSecond));
+        label.setSize(300, 100);
+        clickspersecond.setLocation(frame.getWidth()/2 - clickspersecond.getWidth()/2, 200);
+
+        frame.add(clickspersecond);
+        refreshWindow();
+    }
+    public static void updateCounter() {
+
     }
 
 
